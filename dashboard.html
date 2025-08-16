@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LunaProjectX - Dashboard</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+  <h1>Dashboard</h1>
+  <p>Welcome, <span id="user-nickname"></span>!</p>
+  <button onclick="logout()">Logout</button>
+
+  <h2>Upload File</h2>
+  <input type="file" id="file-input">
+  <button onclick="uploadFile()">Upload</button>
+
+  <h2>Daftar File</h2>
+  <ul id="file-list"></ul>
+
+  <p><a href="uploads.html">Go to Uploads</a></p>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="script.js"></script>
+<script>
+  document.getElementById("user-nickname").textContent = localStorage.getItem("nickname");
+</script>
+</body>
+</html>
